@@ -1,0 +1,1068 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #ffffff;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-container {
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 12px;
+
+    background: #087ea4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-door {
+    width: 28px;
+    height: 28px;
+
+    border: 3px solid white;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-water {
+    color: white;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.05;
+}
+
+.brand-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.brand-subtitle {
+    font-size: 0.75rem;
+    color: #64748b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    gap: 26px;
+}
+
+nav a {
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    color: #475569;
+
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    color: #087ea4;
+}
+
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    padding: 100px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc 0%,
+            #edf8fb 100%
+        );
+}
+
+.hero-grid {
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+
+    color: #087ea4;
+
+    font-weight: 800;
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 0.98;
+
+    color: #0f172a;
+
+    max-width: 700px;
+}
+
+.hero h1 span {
+    color: #087ea4;
+}
+
+.hero-description {
+    margin-top: 28px;
+
+    max-width: 650px;
+
+    font-size: 1.15rem;
+    color: #475569;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    display: inline-block;
+}
+
+.primary-button {
+    background: #087ea4;
+    color: white;
+}
+
+.primary-button:hover {
+    background: #066888;
+}
+
+.secondary-button {
+    border: 1px solid #cbd5e1;
+    background: white;
+
+    color: #334155;
+}
+
+.secondary-button:hover {
+    border-color: #087ea4;
+}
+
+
+
+/* =========================
+   WASHER ART
+========================= */
+
+.washer-card {
+    text-align: center;
+
+    padding: 28px;
+
+    background: white;
+
+    border: 1px solid #dbe5eb;
+    border-radius: 20px;
+
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.1);
+}
+
+.washer {
+    max-width: 340px;
+    height: 390px;
+
+    margin: auto;
+
+    background: #f8fafc;
+
+    border: 5px solid #d4dde4;
+    border-radius: 20px;
+
+    padding: 20px;
+}
+
+.washer-controls {
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.washer-screen {
+    padding: 10px 14px;
+
+    background: #102b38;
+    color: #a5f3fc;
+
+    border-radius: 5px;
+
+    font-family: monospace;
+    font-size: 0.8rem;
+}
+
+.washer-knob {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: 8px solid #94a3b8;
+
+    background: #e2e8f0;
+}
+
+.washer-door {
+    width: 245px;
+    height: 245px;
+
+    margin: 30px auto;
+
+    border-radius: 50%;
+
+    border: 20px solid #334155;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.washer-glass {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #c7eef8,
+            #497485
+        );
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+}
+
+.water-wave {
+    width: 100%;
+    height: 45%;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(8,126,164,0.65),
+            rgba(2,73,105,0.9)
+        );
+
+    border-radius: 50% 50% 0 0;
+}
+
+.washer-card > p {
+    margin-top: 18px;
+
+    color: #64748b;
+
+    font-weight: 600;
+}
+
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    padding: 40px 0;
+
+    background: #087ea4;
+
+    color: white;
+}
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    text-align: center;
+
+    gap: 20px;
+}
+
+.stat h2 {
+    font-size: 2rem;
+}
+
+.stat p {
+    opacity: 0.85;
+
+    font-size: 0.9rem;
+}
+
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+    padding: 95px 0;
+}
+
+.light-section {
+    background: #f8fafc;
+}
+
+.dark-section {
+    background: #111827;
+
+    color: #e5e7eb;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    color: #0f172a;
+
+    font-size: clamp(2rem, 4vw, 3.3rem);
+
+    line-height: 1.1;
+}
+
+.dark-section .section-heading h2 {
+    color: white;
+}
+
+.centered {
+    max-width: 750px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.centered p:last-child {
+    margin-top: 15px;
+
+    color: #64748b;
+}
+
+.section-intro {
+    max-width: 780px;
+
+    margin-bottom: 40px;
+
+    color: #64748b;
+}
+
+.two-column {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+}
+
+.two-column p {
+    margin-bottom: 20px;
+}
+
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.highlight-card {
+    padding: 36px;
+
+    background: #f0f9fc;
+
+    border-left: 5px solid #087ea4;
+
+    border-radius: 8px;
+}
+
+.highlight-card h3 {
+    margin-bottom: 10px;
+}
+
+.highlight-card h3:not(:first-child) {
+    margin-top: 30px;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.tag-list span {
+    padding: 7px 11px;
+
+    background: white;
+
+    border: 1px solid #d5e5ea;
+    border-radius: 30px;
+
+    font-size: 0.85rem;
+}
+
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.product-card {
+    padding: 28px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    transition: 0.2s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
+}
+
+.product-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 22px;
+
+    border-radius: 10px;
+
+    background: #e3f5fa;
+    color: #087ea4;
+
+    font-weight: 900;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card h3 {
+    margin-bottom: 12px;
+}
+
+.product-card p {
+    color: #64748b;
+
+    font-size: 0.93rem;
+}
+
+.product-level {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    color: #087ea4;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.feature {
+    border-top: 3px solid #087ea4;
+
+    padding-top: 20px;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #64748b;
+
+    font-size: 0.92rem;
+}
+
+
+
+/* =========================
+   MARKET
+========================= */
+
+.light-eyebrow {
+    color: #67e8f9;
+}
+
+.market-position {
+    padding: 35px;
+
+    background: #1f2937;
+
+    border-radius: 12px;
+
+    border: 1px solid #374151;
+}
+
+.small-label {
+    color: #67e8f9;
+
+    font-size: 0.7rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.market-position h3 {
+    margin: 10px 0 18px;
+
+    font-size: 1.6rem;
+}
+
+.competitors {
+    margin-top: 60px;
+}
+
+.competitors h3 {
+    margin-bottom: 22px;
+}
+
+.competitor-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.competitor-grid div {
+    padding: 22px;
+
+    background: #1f2937;
+
+    border-radius: 9px;
+}
+
+.competitor-grid strong {
+    display: block;
+
+    color: white;
+
+    margin-bottom: 5px;
+}
+
+.competitor-grid span {
+    color: #9ca3af;
+
+    font-size: 0.85rem;
+}
+
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+.accessibility-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.accessibility-card {
+    padding: 30px;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.accessibility-card .number {
+    color: #087ea4;
+
+    font-weight: 900;
+
+    font-size: 0.8rem;
+}
+
+.accessibility-card h3 {
+    margin: 10px 0;
+}
+
+.accessibility-card p {
+    color: #64748b;
+
+    font-size: 0.9rem;
+}
+
+
+
+/* =========================
+   OPERATIONS
+========================= */
+
+.operations-list {
+    border-top: 1px solid #cbd5e1;
+}
+
+.operation {
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid #cbd5e1;
+}
+
+.operation > span {
+    color: #087ea4;
+
+    font-weight: 900;
+}
+
+.operation p {
+    margin-top: 6px;
+
+    color: #64748b;
+}
+
+
+
+/* =========================
+   FINANCIALS
+========================= */
+
+.financial-card {
+    max-width: 800px;
+
+    margin: auto;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+.financial-row {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px 25px;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.financial-row:last-child {
+    border-bottom: none;
+}
+
+.financial-row:nth-child(even) {
+    background: #f8fafc;
+}
+
+.disclaimer {
+    max-width: 800px;
+
+    margin: 18px auto 0;
+
+    font-size: 0.8rem;
+
+    color: #94a3b8;
+}
+
+
+
+/* =========================
+   FACTS
+========================= */
+
+.fact-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.fact {
+    padding: 30px;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    gap: 12px;
+}
+
+.fact span {
+    font-weight: 900;
+
+    color: #087ea4;
+}
+
+
+
+/* =========================
+   CHALLENGE
+========================= */
+
+.challenge-section {
+    padding: 110px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b3445,
+            #087ea4
+        );
+
+    color: white;
+}
+
+.challenge-content {
+    max-width: 900px;
+}
+
+.challenge-content h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    line-height: 1.05;
+
+    margin-bottom: 35px;
+}
+
+.challenge-content > p:not(.eyebrow) {
+    margin-top: 20px;
+
+    font-size: 1.05rem;
+
+    max-width: 800px;
+
+    opacity: 0.9;
+}
+
+
+
+/* =========================
+   SOURCES
+========================= */
+
+.sources {
+    background: white;
+}
+
+.sources ul {
+    margin-top: 20px;
+    margin-left: 24px;
+}
+
+.sources li {
+    margin-bottom: 12px;
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 45px 0;
+
+    background: #0f172a;
+
+    color: #cbd5e1;
+}
+
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+footer strong {
+    color: white;
+
+    font-size: 1.2rem;
+}
+
+footer p {
+    margin-top: 4px;
+
+    font-size: 0.85rem;
+}
+
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .washer-card {
+        max-width: 430px;
+        margin: auto;
+        width: 100%;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+
+    .product-grid,
+    .feature-grid,
+    .accessibility-grid,
+    .competitor-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 70px 0;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .stats-grid,
+    .product-grid,
+    .feature-grid,
+    .accessibility-grid,
+    .competitor-grid,
+    .fact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .washer {
+        height: 350px;
+    }
+
+    .washer-door {
+        width: 210px;
+        height: 210px;
+    }
+
+    .financial-row {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    /* =========================
+   MULTI-PAGE WEBSITE
+========================= */
+
+nav a.active {
+    color: #087ea4;
+    font-weight: 800;
+}
+
+nav a.active::after {
+    content: "";
+    display: block;
+
+    height: 2px;
+    width: 100%;
+
+    margin-top: 5px;
+
+    background: #087ea4;
+}
+
+.page-header {
+    padding: 90px 0 65px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #edf8fb
+        );
+}
+
+.page-header h1 {
+    font-size: clamp(2.7rem, 6vw, 4.5rem);
+
+    line-height: 1.05;
+
+    color: #0f172a;
+
+    margin-bottom: 18px;
+}
+
+.page-header > .container > p:last-child {
+    max-width: 700px;
+
+    font-size: 1.05rem;
+
+    color: #64748b;
+}
+
+}
