@@ -499,89 +499,163 @@ nav a:hover {
 
 
 
-/* =========================
-   PRODUCT CARDS
-========================= */
+/* =========================================================
+   PRODUCTS PAGE
+========================================================= */
 
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    align-items: stretch;
+.products-page .container {
+    width: min(1280px, 92%);
 }
 
-.product-card {
-    padding: 28px;
 
-    background: #ffffff;
+/* =========================================================
+   PRODUCTS PAGE HEADER
+========================================================= */
 
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
+.products-page .page-header {
+    padding: 90px 0 70px;
 
-    display: flex;
-    flex-direction: column;
-
-    min-height: 470px;
-
-    transition: 0.2s ease;
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #edf8fb
+        );
 }
 
-.product-card:hover {
-    transform: translateY(-5px);
-
-    box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
-}
-
-.product-card h3 {
-    margin-bottom: 14px;
-
-    font-size: 1.15rem;
-    line-height: 1.3;
-
-    color: #0f172a;
-}
-
-.product-card > p {
-    min-height: 96px;
+.products-page .page-header h1 {
+    max-width: 900px;
 
     margin-bottom: 18px;
 
+    color: #0f172a;
+
+    font-size: clamp(3rem, 5vw, 4.8rem);
+    line-height: 1.05;
+}
+
+.products-page .page-header > .container > p:last-child {
+    max-width: 700px;
+
     color: #64748b;
 
-    font-size: 0.93rem;
-    line-height: 1.55;
+    font-size: 1.05rem;
 }
 
 
-/* =========================
-   PRODUCT FEATURE LIST
-========================= */
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
 
-.product-card ul {
+.products-page .product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 26px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   PRODUCT CARDS
+========================================================= */
+
+.products-page .product-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 520px;
+
+    padding: 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe5eb;
+    border-radius: 14px;
+
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.products-page .product-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #b9d8e2;
+
+    box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   PRODUCT CARD TITLES
+========================================================= */
+
+.products-page .product-card h3 {
+    min-height: 56px;
+
+    margin-bottom: 14px;
+
+    color: #0f172a;
+
+    font-size: 1.25rem;
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   PRODUCT DESCRIPTIONS
+========================================================= */
+
+.products-page .product-card > p {
+    min-height: 110px;
+
+    margin-bottom: 22px;
+
+    color: #64748b;
+
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   PRODUCT FEATURE LISTS
+========================================================= */
+
+.products-page .product-card ul {
+    flex-grow: 1;
+
     margin: 0;
+
     padding: 0;
 
     list-style: none;
-
-    flex-grow: 1;
 }
 
-.product-card li {
+.products-page .product-card li {
     position: relative;
 
-    padding-left: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+
+    padding-left: 25px;
 
     color: #475569;
 
-    font-size: 0.93rem;
-    line-height: 1.45;
+    font-size: 0.98rem;
+    line-height: 1.5;
 }
 
-.product-card li::before {
+.products-page .product-card li::before {
     content: "✓";
 
     position: absolute;
+
     left: 0;
     top: 0;
 
@@ -590,122 +664,156 @@ nav a:hover {
     font-weight: 800;
 }
 
-.product-card li:last-child {
+.products-page .product-card li:last-child {
     margin-bottom: 0;
 }
 
 
-
-/* =========================
+/* =========================================================
    PRODUCT LEVEL
-========================= */
+========================================================= */
 
-.product-level {
+.products-page .product-level {
     display: block;
 
-    margin-top: 24px;
-    padding-top: 16px;
+    margin-top: 28px;
+
+    padding-top: 18px;
 
     border-top: 1px solid #e2e8f0;
 
     color: #087ea4;
 
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     font-weight: 800;
 
+    letter-spacing: 1.2px;
+
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-.product-grid {
+
+/* =========================================================
+   PRODUCT TECHNOLOGY SECTION
+========================================================= */
+
+.products-page .section-heading {
+    margin-bottom: 45px;
+}
+
+.products-page .section-heading h2 {
+    color: #0f172a;
+
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
+
+    line-height: 1.1;
+}
+
+
+/* =========================================================
+   TECHNOLOGY FEATURE GRID
+========================================================= */
+
+.products-page .feature-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    align-items: stretch;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 26px;
 }
 
-.product-card {
-    padding: 28px;
+.products-page .feature {
+    min-height: 175px;
+
+    padding: 26px;
 
     background: #ffffff;
 
     border: 1px solid #e2e8f0;
-    border-radius: 12px;
+    border-top: 4px solid #087ea4;
+    border-radius: 10px;
 
-    display: flex;
-    flex-direction: column;
-
-    min-height: 470px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.035);
 }
 
-.product-card h3 {
-    margin-bottom: 14px;
-
-    font-size: 1.15rem;
-    line-height: 1.3;
+.products-page .feature h3 {
+    margin-bottom: 12px;
 
     color: #0f172a;
+
+    font-size: 1.15rem;
+    line-height: 1.35;
 }
 
-.product-card > p {
-    min-height: 96px;
-
-    margin-bottom: 18px;
-
+.products-page .feature p {
     color: #64748b;
 
-    font-size: 0.93rem;
-    line-height: 1.55;
+    font-size: 0.96rem;
+    line-height: 1.6;
 }
 
-.product-card ul {
-    margin: 0;
-    padding: 0;
 
-    list-style: none;
+/* =========================================================
+   TABLET
+========================================================= */
 
-    flex-grow: 1;
+@media (max-width: 1050px) {
+
+    .products-page .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .products-page .feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .products-page .product-card {
+        min-height: 490px;
+    }
+
 }
 
-.product-card li {
-    position: relative;
 
-    padding-left: 22px;
-    margin-bottom: 10px;
+/* =========================================================
+   MOBILE
+========================================================= */
 
-    color: #475569;
+@media (max-width: 650px) {
 
-    font-size: 0.93rem;
-    line-height: 1.45;
-}
+    .products-page .container {
+        width: min(92%, 600px);
+    }
 
-.product-card li::before {
-    content: "✓";
+    .products-page .page-header {
+        padding: 70px 0 55px;
+    }
 
-    position: absolute;
-    left: 0;
-    top: 0;
+    .products-page .product-grid {
+        grid-template-columns: 1fr;
+    }
 
-    color: #087ea4;
+    .products-page .feature-grid {
+        grid-template-columns: 1fr;
+    }
 
-    font-weight: 800;
-}
+    .products-page .product-card {
+        min-height: auto;
 
-.product-level {
-    display: block;
+        padding: 26px;
+    }
 
-    margin-top: 24px;
-    padding-top: 16px;
+    .products-page .product-card h3 {
+        min-height: auto;
+    }
 
-    border-top: 1px solid #e2e8f0;
+    .products-page .product-card > p {
+        min-height: auto;
+    }
 
-    color: #087ea4;
+    .products-page .feature {
+        min-height: auto;
+    }
 
-    font-size: 0.75rem;
-    font-weight: 800;
-
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 
@@ -1352,4 +1460,123 @@ nav a.active::after {
     .contact-grid {
         grid-template-columns: 1fr;
     }
+}
+
+
+
+/* =========================================================
+   CLEARWASH IMAGE LOGO
+========================================================= */
+
+.brand-logo {
+    display: block;
+
+    width: auto;
+    height: 52px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   CLEARWASH PRODUCT THUMBNAIL
+========================================================= */
+
+.washer-thumbnail {
+    display: block;
+
+    width: 100%;
+    max-width: 390px;
+    height: auto;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+}
+
+.washer-card {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe5eb;
+    border-radius: 20px;
+
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.1);
+}
+
+.washer-card > p {
+    margin-top: 20px;
+
+    color: #64748b;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   IMAGE RESPONSIVENESS
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .brand-logo {
+        height: 46px;
+    }
+
+    .washer-thumbnail {
+        max-width: 340px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .brand-logo {
+        height: 40px;
+    }
+
+    .washer-thumbnail {
+        max-width: 280px;
+    }
+
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo {
+    display: block;
+    width: 46px;
+    height: 46px;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+}
+
+.brand-name {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.brand-subtitle {
+    font-size: 0.75rem;
+    color: #64748b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
